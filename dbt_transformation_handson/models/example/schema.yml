@@ -1,4 +1,3 @@
-
 version: 2
 sources:
   - name: my_new_database
@@ -6,30 +5,22 @@ sources:
     tables:
       - name: company
         columns:
-          - name: ID
+          - name: EMP_ID
             description: Primary key of the table
             tests:
               - unique
               - not_null
 
-
 models:
-  - name: company
-    description: This table has basic information about a customer
+
+  - name:company
+    config:
+      materialized: view
     columns:
-      - name:ID
-        description: This is a unique identifier for a customer
+      - name: EMP_ID
+        description: Primary key of the table
         tests:
           - unique
           - not_null
-
-      - name: age
-        description: Customer's age
-
-      - name: NAME
-        description: Customer's NAME
-
-      - name: salary
-        description: customer's salary
 
       
