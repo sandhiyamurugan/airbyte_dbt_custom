@@ -4,4 +4,11 @@ sources:
     description: A replica of the mysql database.
     tables:
       - name: company
-      
+models:
+  - name: company
+    columns:
+      - name: id
+      - name: age
+      - name: name
+      - name: salary
+
