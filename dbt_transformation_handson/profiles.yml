@@ -1,6 +1,12 @@
+version: 2
+config:
+  parrtial_parse: true
+  printer_width: 120
+  send_anonymous_usage_stats: false
+  use_colors: true
 dbt_transformation_handson:
   outputs:
-    dev:
+    prod:
       dbname: my_new_database
       host: 10.168.158.18
       pass: mypassword
@@ -9,5 +15,4 @@ dbt_transformation_handson:
       threads: 8
       type: postgres
       user: myusername
-  target: dev
-
+  target: prod
