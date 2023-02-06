@@ -6,20 +6,30 @@ sources:
     tables:
       - name: company
         columns:
-          - name: EMP_ID
+          - name: ID
             description: Primary key of the table
             tests:
               - unique
               - not_null
 
-models:
 
-  - name:company
-    config:
-      materialized: view
+models:
+  - name: company
+    description: This table has basic information about a customer
     columns:
-      - name: EMP_ID
-	description: Primary key of the table
+      - name:ID
+        description: This is a unique identifier for a customer
         tests:
           - unique
           - not_null
+
+      - name: age
+        description: Customer's age
+
+      - name: NAME
+        description: Customer's NAME
+
+      - name: salary
+        description: customer's salary
+
+      
