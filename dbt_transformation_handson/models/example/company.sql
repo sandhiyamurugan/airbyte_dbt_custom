@@ -1,14 +1,15 @@
-create table "my_new_database"."__destination_database_"."company__dbt_tmp"
-as (
+create  table "my_new_database"."__destination_database_"."company__dbt_tmp"
+  as (
     select
-        _airbyte_emitted_at,
-        _airbyte_ab_id,
+        _airbyte_raw_company._airbyte_emitted_at,
+         _airbyte_raw_company._airbyte_ab_id,
         (current_timestamp at time zone 'utc')::timestamp as _airbyte_normalized_at,
 
-        cast(jsonb_extract_path_text(_airbyte_data, 'EMP_ID') as "EMP_ID",
-        cast(jsonb_extract_path_text(_airbyte_data, 'EMP_AGE') as EMP_AGE,
-        cast(jsonb_extract_path_text(_airbyte_data, 'EMP_NAME') as "EMP_NAME",
-        cast(jsonb_extract_path_text(_airbyte_data, 'SALARY') as salary,
-        cast(jsonb_extract_path_text(_airbyte_data, 'updated_at') as updated_at,
-    from "my_new_database".__destination_database_._airbyte_raw_company as table_alias
+        cast(jsonb_extract_path_text(_airbyte_data, 'ID')as int) as emp_ID,
+        cast(jsonb_extract_path_text(_airbyte_data, 'AGE')as varchar) as emp_AGE,
+        cast(jsonb_extract_path_text(_airbyte_data, 'NAME')as varchar) as emp_NAME,
+        cast(jsonb_extract_path_text(_airbyte_data, 'SALARY')as varchar) as emp_SALARY,
+        cast(jsonb_extract_path_text(_airbyte_data, 'updated_at')as timestamp) as updated_at
+from "my_new_database".__destination_database_._airbyte_raw_company
 );
+
