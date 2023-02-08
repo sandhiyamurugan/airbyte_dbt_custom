@@ -6,7 +6,7 @@ config:
   use_colors: true
 dbt_transformation_handson:
   outputs:
-    prod:
+    dev:
       dbname: my_new_database
       host: 10.168.158.18
       pass: mypassword
@@ -15,4 +15,4 @@ dbt_transformation_handson:
       threads: 8
       type: postgres
       user: myusername
-  target: prod
+  target: dev
