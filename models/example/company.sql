@@ -1,4 +1,4 @@
-create  table "my_new_database"."__destination_database"."company"
+create  table "my_new_database"."__destination_database_"."company"
   as (
     select
         _airbyte_raw_company._airbyte_emitted_at,
