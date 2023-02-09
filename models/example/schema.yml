@@ -1,6 +1,6 @@
 version: 2
 sources:
-  - name: my_new_database
+  - name: new_database
     description: A replica of the mysql database.
     tables:
       - name: company
