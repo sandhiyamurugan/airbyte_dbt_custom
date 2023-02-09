@@ -1,4 +1,4 @@
-create  table "my_new_database"."__destination_database_"."company"
+create  table "my_new_database"."public"."company"
   as (
     select
         _airbyte_raw_company._airbyte_emitted_at,
@@ -10,5 +10,5 @@ create  table "my_new_database"."__destination_database_"."company"
         cast(jsonb_extract_path_text(_airbyte_data, 'NAME')as varchar) as emp_NAME,
         cast(jsonb_extract_path_text(_airbyte_data, 'SALARY')as varchar) as emp_SALARY,
         cast(jsonb_extract_path_text(_airbyte_data, 'updated_at')as timestamp) as updated_at
-from "my_new_database".__destination_database_._airbyte_raw_company
+from "my_new_database".public._airbyte_raw_company
 );
