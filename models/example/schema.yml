@@ -1,13 +1,13 @@
 version: 2
 sources:
-  - name: company_tables
+  - name: raw_company_table
     database: my_new_database
     schema: __destination_database
     description: A replica of the mysql database.
     tables:
       - name: _airbyte_raw_company
 models:
-  - name: company
+  - name: company_table
     columns:
       - name: id
       - name: age
