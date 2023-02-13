@@ -7,7 +7,7 @@ sources:
     tables:
       - name: _airbyte_raw_company
 models:
-  - name: emp_company
+  - name: company
     columns:
       - name: id
       - name: age
