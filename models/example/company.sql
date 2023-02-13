@@ -1,8 +1,8 @@
 create  table "my_new_database"."__destination_database"."emp_company"
   as (
     select
-        _airbyte_raw_company._airbyte_emitted_at,
-         _airbyte_raw_company._airbyte_ab_id,
+        _airbyte_emitted_at,
+        _airbyte_ab_id,
         (current_timestamp at time zone 'utc')::timestamp as _airbyte_normalized_at,
 
         cast(jsonb_extract_path_text(_airbyte_data, 'ID')as int) as emp_ID,
