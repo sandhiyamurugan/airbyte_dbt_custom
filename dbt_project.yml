@@ -19,6 +19,6 @@ clean-targets:
 models:
   dbt_transformation_handson:
     example:
-      company:
+      emp_company:
         +materialized: table
 
