@@ -10,5 +10,5 @@ create  table "my_new_database"."__destination_database"."company"
         cast(jsonb_extract_path_text(_airbyte_data, 'NAME')as varchar) as emp_NAME,
         cast(jsonb_extract_path_text(_airbyte_data, 'SALARY')as varchar) as emp_SALARY,
         cast(jsonb_extract_path_text(_airbyte_data, 'updated_at')as timestamp) as updated_at
-from "my_new_database"._destination_database._airbyte_raw_company
+from {{source('company_tables','_airbyte_raw_company')}}
 );
