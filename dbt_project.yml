@@ -21,4 +21,8 @@ models:
     example:
       emp_company:
         +materialized: table
+      emp_department:
+        +materialized: table
+      emp_table_two:
+        +materialized: table
 
