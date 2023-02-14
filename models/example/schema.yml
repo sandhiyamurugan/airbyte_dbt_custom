@@ -5,6 +5,8 @@ sources:
     schema: __destination_database_
     tables:
       - name: _airbyte_raw_company
+      - name: _airbyte_raw_department
+      - name: _airbyte_raw_table_two
 
 models:
   - name: emp_company
@@ -13,4 +15,13 @@ models:
       - name: age
       - name: name
       - name: salary
-
+  - name: emp_department
+    columns:
+      - name: id
+      - name: dept
+      - name: emp_id
+  - name: emp_table_two
+    columns:
+      - name: id
+      - name: name
+      - name: updated_at
