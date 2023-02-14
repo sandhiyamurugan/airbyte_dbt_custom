@@ -1,11 +1,11 @@
 version: 2
 sources:
-  - name: raw_company_table
+  - name: raw_table
     database: my_new_database
     schema: __destination_database
-    description: A replica of the mysql database.
     tables:
       - name: _airbyte_raw_company
+      - name: _airbyte_raw_department
 models:
   - name: emp_company
     columns:
@@ -13,4 +13,9 @@ models:
       - name: age
       - name: name
       - name: salary
- 
+  - name: emp_department
+    columns:
+      - name: id
+      - name: dept
+      - name: emp_id
+
