@@ -2,7 +2,7 @@ version: 2
 sources:
   - name: raw_table
     database: my_new_database
-    schema: __destination_database
+    schema: __destination_database_
     tables:
       - name: _airbyte_raw_company
 
