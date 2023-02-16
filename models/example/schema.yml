@@ -9,17 +9,12 @@ sources:
       - name: _airbyte_raw_table_two
 
 models:
-  - name: emp_company
+  - name: emp_products
     columns:
-      - name: id
-      - name: age
-      - name: name
-      - name: salary
-  - name: emp_department
-    columns:
-      - name: id
-      - name: dept
-      - name: emp_id
+      - name: product_id
+      - name: product_name
+      - name: price
+      - name: updated_at
   - name: emp_table_two
     columns:
       - name: id
