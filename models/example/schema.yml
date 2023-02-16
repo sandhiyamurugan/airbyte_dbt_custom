@@ -4,8 +4,7 @@ sources:
     database: my_new_database
     schema: __destination_database_
     tables:
-      - name: _airbyte_raw_company
-      - name: _airbyte_raw_department
+      - name: _airbyte_raw_products
       - name: _airbyte_raw_table_two
 
 models:
